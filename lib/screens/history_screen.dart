@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:t20_yt/widgets/history_widget.dart';
 import '../models/history.dart';
 import '../utility/data_api.dart';
 import '../widgets/background_widget.dart';
@@ -28,7 +28,8 @@ class HistoryScreen extends StatelessWidget {
                   itemCount: historyList.length,
                   itemBuilder: (context, index){
 
-                return Text(historyList[index].winner);
+                return HistoryWidget(history: historyList[index]);
+
               });
 
             }else{
